@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Generator</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <h1>Report Generator</h1>
+    <div id="container">
+      <div id="mainWindow">
+        <label for="docx">Select File Template</label>
+        <select id="docx">
+          <option value="RIB.docx">RIB</option>
+          <option value="ORION.docx">Orion</option>
+          <option value="WINJIT.docx">Winjit</option>
+        </select>
+
+        <label for="platform">Select Platform</label>
+        <select id="platform">
+          <option value="WEB">Web Application</option>
+          <option value="MOBILE">Mobile (Android / IOS)</option>
+          <option value="DESKTOP">Thick Client</option>
+          <option value="API">API</option>
+          <option value="LLM">LLM</option>
+        </select>
+
+        <label for="file-upload">Upload Your File (zip):</label>
+        <input type="file" id="file-upload" accept=".zip" />
+
+        <label for="file-name"
+          >Enter a Name for the File (e.g., Security Testing Report
+          CITON):</label
+        >
+        <input
+          type="text"
+          id="file-name"
+          placeholder="Enter name for the file"
+        />
+
+        <label for="version-number"
+          >Enter an Application Version Number (e.g., v1.0.40):</label
+        >
+        <input
+          type="text"
+          id="version-number"
+          placeholder="Enter name for the file"
+        />
+      </div>
+
+      <!-- Hidden download button -->
+      <div style="display: flex; gap: 2px">
+        <button id="submit-btn">Submit</button>
+        <button id="download-btn" style="display: none">
+          Download Processed File
+        </button>
+        <button id="reset-btn" style="display: none">Reset</button>
+      </div>
+
+      <!-- Loader -->
+      <div id="loader">
+        <div class="loader"></div>
+        <p class="ProcessingText">Processing... Please wait.</p>
+      </div>
+    </div>
+  </body>
+</html>
