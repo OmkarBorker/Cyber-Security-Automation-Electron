@@ -1,0 +1,7 @@
+dist
+node_modules
+report-generator-darwin-arm64
+report-generator-win32-x64
+report-generator-darwin-arm64.zip
+.codesight
+text
